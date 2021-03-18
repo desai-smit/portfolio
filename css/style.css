@@ -1,0 +1,718 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg.jpg")top center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.banner-txt{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+}
+
+.banner-txt h1{
+    font-size: 7rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.banner-txt h3{
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.banner-txt span::before{
+    content: '';
+    display: inline-block;
+    font-size: 4rem;
+    margin-top: 2rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+    text-transform: capitalize;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 12ch;
+    animation: hamza 10s steps(12) infinite;
+    border-right: 3px solid #0d6efd;
+    position: absolute;
+    top: 50%;
+
+}
+
+@keyframes hamza{
+    0%{
+        content: 'Designer';
+        width: 0ch;
+    }
+
+    9%{
+        content: 'Designer';
+        width: 8ch;
+    }
+
+    18%{
+        content: 'Designer';
+        width: 2ch;
+    }
+
+    27%{
+        content: 'Devloper';
+        width: 2ch;
+    }
+
+    36%{
+        content: 'Devloper';
+        width: 8ch;
+    }
+
+    38%{
+        content: 'Devloper';
+        width: 0ch;
+    }
+
+    45%{
+        content: 'Freelancer';
+        width: 0ch;
+    }
+
+    54%{
+        content: 'Freelancer';
+        width: 10ch;
+    }
+
+    63%{
+        content: 'Freelancer';
+        width: 0ch;
+    }
+
+    72%{
+        content: 'Photographer';
+        width: 0ch;
+    }
+
+    81%{
+        content: 'Photographer';
+        width: 12ch;
+    }
+
+    100%{
+        content: 'Photographer';
+        width: 0ch;
+    }
+
+    
+
+    
+}
+
+
+.navigation{
+    width: 20%;
+    height: 100vh;
+    background-color: #272829;
+    position: fixed;
+    top: 0px;
+    transition: 1s ease;
+    padding: 1rem 1rem;
+    text-align: center;
+    z-index: 9999;
+}
+
+nav{
+    position: relative;
+    
+}
+
+.logo-img{
+    padding: 1.2rem;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 50%;
+    cursor: pointer;  
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.logo-img:hover{
+    opacity: 0.5;
+}
+
+.logo-img img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+nav h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav h1 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav h1 a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icon{
+    width: 100%;
+    padding: 2rem 1rem;
+    display: block;
+}
+
+.social-icon span{
+    font-size: 2rem;
+    display: inline-block;
+    margin-right: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 20%;
+    transition: 500ms;
+}
+
+.social-icon span:hover{
+    background-color: #0d6efd;
+    
+}
+
+nav ul{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 2rem 1.5rem;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 1.8rem 0rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+nav ul li a{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 400;
+    
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: #fff;
+} 
+
+nav ul li span{
+    margin-right: 1.5rem;
+}
+
+.active {
+    color: #0d6dfda8;
+    background-color: #0d6efd;
+    padding-left: 0.5rem;
+}
+
+#menu{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#menu span{
+    font-size: 3.5rem;
+    color: #0d6efd;
+}
+
+#close{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#close span{
+    font-size: 3rem;
+    color: #0d6efd;
+}
+
+
+/* about section start here */
+
+#custom{
+    width: 75%;
+    margin-left: 20%;
+    color: #000;
+    padding-left: 6rem;
+}
+
+#custom h2{
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: -1rem;
+}
+
+#custom hr{
+    display: block;
+    width: 20%;
+    height: 5px;
+    outline: none;
+    border: 0;
+    background-color: #0d6efd;
+}
+
+#custom p{
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+}
+
+#custom .image-box{
+    width: 30%;
+}
+
+#custom img{
+    width: 100%;
+}
+
+#custom .image-box2{
+    width: 67%;
+    margin-left: 3%;
+}
+
+#custom .image-box2 h1{
+    font-size: 3rem;
+    margin: 0px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #0d6efd;
+    margin-bottom: 3rem;
+
+}
+#custom .image-box2 ul{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3rem;
+}
+#custom .image-box2 ul li{
+    list-style: none;
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+#custom .image-box2 ul li span{
+    color: #0d6efd;
+}
+
+.fact{
+    margin-top: 8rem;
+}
+
+.fect-box .fect-boxs{
+    width: 22%;
+    text-align: center;
+    margin: 1%;
+}
+
+.fect-box .fect-boxs span{
+    font-size: 3rem;
+    color: #0d6efd;
+}
+
+.fect-box .fect-boxs h2{
+    margin: 0px;
+    margin-bottom: 3rem;
+}
+
+.fect-box .fect-boxs h3{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#custom .fect-box .fect-boxs p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+
+/* skill box start here */
+
+#custom .skill{
+    width: 100%;
+    padding: 3rem 0rem;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #0d6dfd28;
+}
+
+.skill1{
+    width: 49%;
+
+}
+
+.skill-box{
+    display: block;
+    position: relative;
+}
+
+.skill-box .left{
+    width: 50%;
+    text-align: left;
+    display: block;
+    float: left;
+}
+
+.skill-box .right{
+    width: 50%;
+    text-align: right;
+    display: block;
+    float: left;
+
+}
+
+.skill-box .left, .skill-box .right{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+
+.skill-box progress{
+    width: 100%;
+    height: 15px;
+    outline: none;
+}
+
+
+
+#resume{
+    margin-top: 6rem;
+}
+
+#resume .r-left{
+    width: 49%;
+    padding-left: 2rem;
+}
+
+#resume .r-right{
+    width: 49%;
+    margin-left: 2%;
+    padding-left: 2rem;
+
+}
+
+#resume .r-right h2, #resume .r-left h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.r-box{
+    border-left: 2px solid #0d6efd;
+    padding-left: 2rem;
+}
+
+.r-box h3{
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+#resume .r-box p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-style: italic;
+}
+
+#resume .r-box ul{
+    margin-left: 2rem;
+}
+
+#resume .r-box li{
+    list-style: disc;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.box-e{
+    display: block;
+    width: 20%;
+    background-color: #0d6dfd65;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+#portfolio{
+    width: 100%;
+    background-color: #0d6dfd2c;
+
+}
+
+#portfolio .ptt-box{
+    text-align: center;
+    width: 100%;
+
+}
+
+#portfolio .pot-box{
+    width: 30%;
+    margin:auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 25px;
+    margin-bottom: 3rem;
+
+}
+
+.p-box {
+    cursor: pointer;
+}
+
+.p-box span{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.phot{
+    margin-bottom: 2rem;
+    cursor: pointer;
+    
+}
+
+
+
+.photo-box img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#formm form {
+    padding: 2rem;
+}
+
+#formm form label{
+    display: block;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#formm form textarea{
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1024px){
+    #menu,
+    #close{
+        display: block;
+    }
+
+    .navigation{
+        width: 30%;
+        left: -80%;
+        z-index: 9999;
+    }
+
+    html{
+        font-size: 13px;
+    }
+
+    #custom{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    #custom .fect-boxs{
+        width: 20%;
+        margin: 0 auto;
+    }
+
+    #custom  .skill1{
+        width: 100%;
+    }
+
+    #custom  .r-left{
+        width: 100%;
+    }
+
+    #resume .r-left{
+        width: 100%;
+        padding-left: 0rem;
+    }
+    
+    #resume .r-right{
+        width: 100%;
+        margin-left: 0%;
+        padding-left: 0rem;
+    
+    }
+
+    #about .fect-box .fect-boxs{
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 11px;
+    }
+    .navigation{
+        width: 40%;
+        z-index: 9999;
+    }
+
+    .banner-txt h1{
+        font-size: 5rem;
+    }
+    .banner-txt h3{
+        font-size: 2.5rem;
+    }
+
+    .banner-txt span::before{
+        font-size: 2.5rem;
+    }
+
+    .social-icon .fa{
+        font-size: 1.9rem;
+    }
+
+    nav ul li a{
+        font-size: 1.8rem;
+    }
+    #about .fect-box{
+        width: 100%;
+    }
+}
+
+@media (max-width:425px){
+    html{
+        font-size: 10px;
+    }
+    .navigation{
+        width: 70%;
+    }
+
+    .banner-txt{
+        width: 100%;
+        padding-left: 2rem;
+    }
+
+    #portfolio .ptt-box{
+        width: 100%;
+    }
+
+    #portfolio .pot-box{
+        width: 100%;
+    }
+
+    #portfolio{
+        padding: 0rem;
+    }
+
+    #custom{
+        padding-left: 0.5rem;
+    }
+
+    #about .fect-box{
+        width: 100%;
+    }
+
+    #about .image-box{
+        width: 100%;
+    }
+
+    #about .image-box2{
+        width: 100%;
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width:320px){
+    html{
+        font-size: 8px;
+    }
+
+    .navigation{
+        width: 80%;
+        z-index: 9999;
+    }
+    .social-icon .fa{
+        font-size: 1.8rem;
+        margin-right: 5px;
+    }
+
+    nav ul li a{
+        font-size: 1.8rem;
+    }
+}
